@@ -6,7 +6,6 @@ class SummaryCard extends StatelessWidget {
   final Color color;
   final int size;
 
-  //HANDLE DATA YANG DIKIRIMKAN
   SummaryCard({
     @required this.total,
     @required this.label,
@@ -17,13 +16,11 @@ class SummaryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: color, //WARNA CARD BERDASARKAN WARNA YANG DITERIMA
-      //LALU CHILDNYA KITA BAGI DUA MENGGUNAKAN KOLOM
+      color: color, 
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          //YANG PERTAMA ADALAH TOTAL DATA
           Text(
             total,
             style: TextStyle(
@@ -31,7 +28,6 @@ class SummaryCard extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          //DAN YANG KEDUA ADALAH LABEL DATA
           Text(
             label,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
